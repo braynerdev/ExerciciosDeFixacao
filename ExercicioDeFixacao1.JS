@@ -18,7 +18,7 @@ console.log(resposta(Nome,Diagnostico))
 som = prompt(`deseja fazer outra consulta? (1-sim e 2-não): `)
 }
 
-//fiz a função so para testar!
+//não era necessario mas fiz a função so para treinar, pois minha lingugem é c# e python e preciso treinar algumas coisas em js prara aprender!
 function resposta(Nome, Diagnostico){
     if (Diagnostico == "1"){
         return `Você deve indicar para ${Nome} algum antibiótico, exemplo:\n[1] amoxicilina\n[2] azitromicina\n[3] ampicilina\n[4] tetraciclina.`;
