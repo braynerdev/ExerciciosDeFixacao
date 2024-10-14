@@ -21,11 +21,18 @@ som = prompt(`deseja fazer outra consulta? (1-sim e 2-não): `)
 
 //não era necessario mas fiz a função so para treinar, pois minha lingugem é c# e python e preciso treinar algumas coisas em js prara aprender!
 function resposta(Nome, Diagnostico){
-    if (Diagnostico == "1"){
-        return `Você deve indicar para ${Nome} algum antibiótico, exemplo:\n[1] amoxicilina\n[2] azitromicina\n[3] ampicilina\n[4] tetraciclina.`;
-    }else if (Diagnostico =="2") {
-        return`Você deve indicar para ${Nome} algum Analgésico, exemplo:\n[1] comuns\n[2] anti-inflamatórios não esteroides (AINEs)\n[3] opioides`;
-    } else {
-       return `Você deve indicar para ${Nome} algum Anti-inflamatório, exemplo:\n[1] anti-inflamatórios não esteroides (AINEs)\n[2] corticoides`;
+
+    switch (Diagnostico) {
+        case '1':
+            return `Você deve indicar para ${Nome} algum antibiótico, exemplo:\n[1] amoxicilina\n[2] azitromicina\n[3] ampicilina\n[4] tetraciclina.`;
+            break;
+        case '2':
+            return`Você deve indicar para ${Nome} algum Analgésico, exemplo:\n[1] comuns\n[2] anti-inflamatórios não esteroides (AINEs)\n[3] opioides`;
+            break
+        case '3':
+            return `Você deve indicar para ${Nome} algum Anti-inflamatório, exemplo:\n[1] anti-inflamatórios não esteroides (AINEs)\n[2] corticoides`;
+            break;
+        default:
+            break;
     }
 }
